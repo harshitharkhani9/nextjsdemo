@@ -1,0 +1,192 @@
+@import '../../public/assets/css/fonts/fonts.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  *,
+  ::before,
+  ::after {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth overflow-x-hidden;
+  }
+
+  body {
+    @apply p-0 m-0 font-poppins overflow-x-hidden text-black relative;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-grey-100 rounded-10;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[5px];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-10;
+  }
+
+  input,
+  textarea,
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+  }
+
+  ul {
+    @apply m-0 p-0 list-none;
+  }
+
+  ul li {
+    @apply list-none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 font-primary font-400 text-black;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    @apply xl:text-48 xl:leading-56 lg:text-40 lg:leading-46 text-32 leading-42;
+  }
+
+  h2 {
+    @apply xl:text-38 xl:leading-44 lg:text-32 lg:leading-40 text-28 leading-36;
+  }
+
+  h3 {
+    @apply xl:text-32 xl:leading-40 lg:text-28 lg:leading-36 text-24 leading-30;
+  }
+
+  h4 {
+    @apply lg:text-28 lg:leading-34 text-20 leading-26;
+  }
+
+  h5 {
+    @apply lg:text-22 lg:leading-28 text-18 leading-26;
+  }
+
+  h6 {
+    @apply text-18 leading-26;
+  }
+
+  .container,
+  .container-xl {
+    @apply mx-auto;
+  }
+
+  .container-fluid {
+    @apply maxscreen:max-w-[1920px] maxscreen:mx-auto xl:px-60 lg:px-40 md:px-30 px-20;
+  }
+
+  .container-custom {
+    @apply maxscreen:max-w-[1920px] maxscreen:mx-auto xxl:px-[120px] xl:px-[60px] lg:px-40 md:px-30 px-20;
+  }
+
+  .container-small {
+    @apply maxscreen:max-w-[1920px] maxscreen:mx-auto lg:px-30 px-20;
+  }
+
+  .content p {
+    @apply font-poppins font-400 text-16 leading-24;
+  }
+
+  .content ul {
+    @apply m-0 p-0 flex flex-col gap-y-[10px];
+  }
+
+  .content ul li {
+    @apply pl-26 relative font-montserrat text-black text-16 leading-24 font-400;
+  }
+
+  .content ul li::before {
+    @apply content-[''] bg-no-repeat bg-contain w-[16px] h-[16px] absolute top-[3px] left-0;
+    /* background-image: url('/assets/images/list-icon.svg'); */
+  }
+
+  .content_black p,
+  .content_black a,
+  .content_black ul li,
+  .content_black ul li p {
+    @apply text-black;
+  }
+
+  .titleblack_reg h2 {
+    @apply font-Heading lg:text-34 lg:leading-44 leading-34 text-24 font-500 sm:uppercase normal-case sm:tracking-[1.3px] text-black relative;
+  }
+}
+
+@layer components {
+  .btn_primary {
+    @apply px-[24px] py-[14px] sm:font-400 font-500 font-montserrat text-16 leading-16 text-white rounded-5 bg-primary inline-block relative overflow-hidden duration-300 delay-150 ease-linear z-1 uppercase;
+  }
+
+  .btn_primary:before {
+    content: '';
+    @apply absolute top-0 right-0 w-0 h-full bg-secondary duration-300 delay-150 ease-linear -z-1;
+  }
+
+  .btn_primary:hover:before {
+    @apply w-full left-0;
+  }
+
+  .btn_secondary {
+    @apply px-[24px] py-[14px] sm:font-400 font-500 font-montserrat text-16 leading-16 text-white rounded-5 bg-secondary inline-block relative overflow-hidden duration-300 delay-150 ease-linear z-1 uppercase;
+  }
+
+  .btn_secondary:before {
+    content: '';
+    @apply absolute top-0 right-0 w-0 h-full bg-primary duration-300 delay-150 ease-linear -z-1;
+  }
+
+  .btn_secondary:hover:before {
+    @apply w-full left-0;
+  }
+
+  .error_success {
+    @apply text-green font-montserrat font-400 sm:text-14 text-12 sm:leading-20 leading-16 mt-5 mb-5;
+  }
+
+  .error_warning {
+    @apply text-red font-montserrat font-400 sm:text-14 text-12 sm:leading-20 leading-16 mt-5 mb-5;
+  }
+
+  .globalform_error {
+    @apply text-red text-14 leading-20 font-400 font-montserrat mt-5;
+  }
+
+  .menuhover_linkanimate a {
+    @apply before:content-[''] before:absolute before:transition-all before:duration-500 before:ease-in-out before:h-[2px] before:w-full before:bg-primary before:bottom-0 before:scale-0 hover:before:scale-100;
+  }
+}
+
+@layer utilities {}
+
+/* Responsive CSS Start */
+@screen lgscreen {}
+
+/* Responsive CSS End */

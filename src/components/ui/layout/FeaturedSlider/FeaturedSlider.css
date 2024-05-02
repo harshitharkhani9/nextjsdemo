@@ -1,0 +1,21 @@
+/* FeaturedSlider CSS Start */
+.arrivalslider__producttitle a {
+    @apply inline-block sm:font-primary font-montserrat lg:text-18 lg:leading-26 text-16 leading-24 lg:font-400 font-500 text-black transition-all duration-500 ease-in-out hover:text-primary;
+  }
+  
+  .arrivalslider .swiper-arrow .swiper-button-prevarrival::after,
+  .arrivalslider .swiper-arrow .swiper-button-nextarrival::after {
+    @apply content-none;
+  }
+  
+  .arrivalslider .swiper-arrow .swiper-button-prevarrival,
+  .arrivalslider .swiper-arrow .swiper-button-nextarrival {
+    @apply w-[40px] h-[40px] rounded-100 border-2 border-solid border-primary transition-all duration-500 ease-in-out hover:border-primary flex items-center justify-center cursor-pointer;
+    position: unset !important;
+  }
+  
+  .arrivalslider .swiper-arrow .arrivalslider_swiperarrow.swiper-button-disabled {
+    @apply border-transparent opacity-100;
+  }
+  /* FeaturedSlider CSS End */
+  

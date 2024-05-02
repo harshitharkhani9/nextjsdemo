@@ -1,0 +1,6 @@
+/* Herobanner CSS Start */
+.herobanner_imgitem img {
+    @apply animate-elementMover lgscreen:animate-none;
+}
+
+/* Herobanner CSS End */

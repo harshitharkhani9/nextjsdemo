@@ -1,0 +1,5 @@
+/* LoadMoreList CSS Start */
+.listitem:hover .arrivalslider__itemimgmain img {
+    @apply rotate-3;
+}
+/* LoadMoreList CSS End */
