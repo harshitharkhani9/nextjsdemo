@@ -5,7 +5,11 @@ export const metadata = {
   description: 'Author Login',
 };
 export default async function login() {
-  return(
-    <h1>Login</h1>
+  return (
+    <div className="main py-60">
+      <div className="container-fluid">
+        <h1>Login</h1>
+      </div>
+    </div>
   );         
 }

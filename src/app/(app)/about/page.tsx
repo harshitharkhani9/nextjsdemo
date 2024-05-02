@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
 
 export const metadata = {
-  title: 'Whiskwhet | Login',
-  description: 'Author Login',
+  title: "Whiskwhet | Login",
+  description: "Author Login",
 };
 export default async function login() {
-  return(
-    <h1>About</h1>
-  );         
+  return (
+    <>
+      <div className="main py-60">
+        <div className="container-fluid">
+          <h1>About</h1>
+        </div>
+      </div>
+    </>
+  );
 }

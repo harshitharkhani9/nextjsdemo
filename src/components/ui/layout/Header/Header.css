@@ -1,9 +1,20 @@
 /* Header CSS Start */
-.header_menu ul {
+.header.is_sticky {
+    animation-duration: 0.9s;
+    @apply animate-stickySlideDown fixed top-0 left-0 w-full transition-all duration-500 z-999 shadow-soft_shadow;  
+}
+
+.header_menu ul,
+.sidebar_menu ul {
     @apply flex items-center gap-20;
 }
 
-.header_menu ul li a {
+.sidebar_menu ul {
+    @apply flex-col;
+}
+
+.header_menu ul li a,
+.sidebar_menu ul li a {
     @apply relative transition-all duration-500 ease-in-out text-16 leading-22 text-black font-poppins font-600;
 }
 
@@ -12,3 +23,23 @@
 }
 
 /* Header CSS End */
+
+/* Menu Sidebar CSS Start */
+.menusidebar {
+    @apply translate-x-[110%] transition-all duration-500 ease-in-out w-full fixed top-0 right-0 h-screen max-w-[360px] z-99999 py-30 px-30 bg-white shadow-hard_shadow sm:rounded-none rounded-10 overflow-x-hidden;  
+}
+
+.menusidebar.active {
+    @apply translate-x-0;
+}
+
+html.menusidebar_Active,
+body.menusidebar_Active {
+    @apply overflow-hidden relative;
+}
+
+body.menusidebar_Active::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 z-9999 transition-all duration-500 ease-in-out;        
+}   
+
+/* Menu Sidebar CSS End */

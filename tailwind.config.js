@@ -299,7 +299,7 @@ module.exports = {
      },
      dropShadow: {
         none: 'none',
-        pressBox: '4px 4px 10px 2px rgba(0, 0, 0, 0.4)',
+        regular: '4px 4px 10px 2px rgba(0, 0, 0, 0.4)',
      },
      contrast: {},
      outline: {
@@ -331,8 +331,6 @@ module.exports = {
            40: '40px',
            50: '50px',
            '50-per': '50%',
-           160: '160px',
-           144: '144px',
         },
         height: {
            5: '5px',
@@ -342,8 +340,6 @@ module.exports = {
            30: '30px',
            40: '40px',
            50: '50px',
-           160: '160px',
-           144: '144px',
         },
         minHeight: {
            auto: 'auto',
