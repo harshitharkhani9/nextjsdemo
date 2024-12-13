@@ -1,0 +1,5 @@
+/* Zigzag CSS Start */
+.zigzag-wrapper.zigzag_reverse .zigzag_row .zigzag_column {
+    @apply last:lg:order-1 last:order-2 first:lg:order-2 first:order-1;
+}
+/* Zigzag CSS End */

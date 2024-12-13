@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className="footer_logo text-center">
                         <Link href="/" className="inline-block">
                             <Image
-                                src="/assets/images/logo.png"
+                                src="/assets/images/Logo_wine.svg"
                                 className="block w-full h-auto sm:max-w-[200px] max-w-[160px] object-contain"
                                 priority
                                 width="260"
@@ -32,7 +32,7 @@ export default function Footer() {
                     <div className="footer_menu menuhover_linkanimate">
                         <ul>
                             <li>
-                                <Link href="#">About</Link>
+                                <Link href="/about">About</Link>
                             </li>
                             <li>
                                 <Link href="#">Shop</Link>  

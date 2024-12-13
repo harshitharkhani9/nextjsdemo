@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -15,12 +15,12 @@ export default function FeaturedSlider() {
     const handleNextClickArrival = (selector: string) => {
         const swiper = (document.querySelector(selector) as any)?.swiper;
         swiper && swiper.slideNext();
-      };
+    };
     
-      const handlePrevClickArrival = (selector: string) => {
-        const swiper = (document.querySelector(selector) as any)?.swiper;
-        swiper && swiper.slidePrev();     
-      };
+    const handlePrevClickArrival = (selector: string) => {
+      const swiper = (document.querySelector(selector) as any)?.swiper;
+      swiper && swiper.slidePrev();     
+    };
 
   return (
     <section className="arrivalslider-wrapper py-50">
@@ -28,7 +28,7 @@ export default function FeaturedSlider() {
         <div className="container-fluid">
           <div className="arrivalslider__top flex flex-wrap md:justify-between justify-center items-center">
             <div className="arrivalslider__title titleblack_reg">
-              <h2>New Arrivals</h2>
+              <h2><span>New</span> Arrivals</h2>
             </div>
             <div className="arrivalslider__arrow md:block hidden">
               <div className="swiper-arrow relative flex items-center  gap-x-[8px]">
@@ -69,9 +69,13 @@ export default function FeaturedSlider() {
             <div className="arrivalslider__loop">
               <Swiper
                 spaceBetween={16}
-                loop={false}
+                loop={true}
                 slidesPerView={3.4}
-                speed={1500}
+                speed={800}
+                autoplay={{
+                  delay: 1200,
+                  disableOnInteraction: false,
+                }}
                 breakpoints={{
                   0: { 
                     slidesPerView: 1.4,
@@ -87,7 +91,7 @@ export default function FeaturedSlider() {
                   nextEl: '.swiper-button-nextarrival',
                   prevEl: '.swiper-button-prevarrival',
                 }}
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 className="arrival-slider"
               >
                 <SwiperSlide key="0">

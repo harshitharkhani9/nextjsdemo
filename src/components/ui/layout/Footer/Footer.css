@@ -11,6 +11,10 @@
     @apply flex justify-center items-center gap-x-20 gap-y-2;
 }
 
+.footer_social ul li {
+    @apply flex;  
+}
+
 .footer_social ul li a img {
     @apply w-[20px] h-[20px] object-contain;
 }

@@ -48,7 +48,7 @@ export default function Header() {
               <div className="header_logo leading-0">
                 <Link href="/" className="inline-block">
                   <Image
-                    src="/assets/images/logo.png"
+                    src="/assets/images/Logo_wine.svg"
                     className="block w-full h-auto sm:max-w-[200px] max-w-[160px] object-contain"
                     priority
                     width="260"
@@ -60,10 +60,10 @@ export default function Header() {
               <div className="header_menu lg:block hidden menuhover_linkanimate">
                 <ul>
                   <li>
-                    <Link href="#">About</Link>
+                    <Link href="/about">About</Link>
                   </li>
                   <li>
-                    <Link href="#">Shop</Link>
+                    <Link href="/product">Shop</Link>
                   </li>
                   <li>
                     <Link href="#">Contact</Link>

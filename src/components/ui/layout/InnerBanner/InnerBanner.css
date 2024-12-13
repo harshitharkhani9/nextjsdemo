@@ -1,0 +1,5 @@
+/* InnerBanner CSS Start */
+.innerbanner_title h1 {
+    @apply text-white font-primary uppercase font-500;  
+}
+/* InnerBanner CSS End */

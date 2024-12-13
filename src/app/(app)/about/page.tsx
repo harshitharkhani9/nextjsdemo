@@ -1,17 +1,18 @@
 import React from "react";
+import InnerBanner from "@/components/ui/layout/InnerBanner/InnerBanner";
+import Zigzag from "@/components/ui/layout/Zigzag/Zigzag";
+import MultiZigzag from "@/components/ui/layout/MultiZigzag/MultiZigzag";
 
 export const metadata = {
-  title: "Whiskwhet | Login",
-  description: "Author Login",
+  title: "Whiskwhet | About",
+  description: "About",
 };
-export default async function login() {
+export default async function about() {
   return (
     <>
-      <div className="main py-60">
-        <div className="container-fluid">
-          <h1>About</h1>
-        </div>
-      </div>
+      <InnerBanner />
+      <Zigzag />
+      <MultiZigzag />
     </>
   );
 }

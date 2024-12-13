@@ -1,5 +1,14 @@
 /* LoadMoreList CSS Start */
 .listitem:hover .arrivalslider__itemimgmain img {
-    @apply rotate-3;
+    @apply rotate-3 absolute top-0 left-0;
+}
+.arrivalslider__item:hover img.static_image {
+    @apply opacity-0;  
+}
+.arrivalslider__item img.hover_image {
+    @apply opacity-0;
+}
+.arrivalslider__item:hover img.hover_image {
+    @apply opacity-100;
 }
 /* LoadMoreList CSS End */

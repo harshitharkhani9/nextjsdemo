@@ -70,27 +70,27 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1 {
+  h1, .h1 {
     @apply xl:text-48 xl:leading-56 lg:text-40 lg:leading-46 text-32 leading-42;
   }
 
-  h2 {
+  h2, .h2 {
     @apply xl:text-38 xl:leading-44 lg:text-32 lg:leading-40 text-28 leading-36;
   }
 
-  h3 {
+  h3, .h3 {
     @apply xl:text-32 xl:leading-40 lg:text-28 lg:leading-36 text-24 leading-30;
   }
 
-  h4 {
+  h4, .h4 {
     @apply lg:text-28 lg:leading-34 text-20 leading-26;
   }
 
-  h5 {
+  h5, .h5 {
     @apply lg:text-22 lg:leading-28 text-18 leading-26;
   }
 
-  h6 {
+  h6, .h6 {
     @apply text-18 leading-26;
   }
 
@@ -112,7 +112,7 @@
   }
 
   .content p {
-    @apply font-poppins font-400 text-16 leading-24;
+    @apply font-poppins font-400 text-16 leading-24 mb-15 last:mb-0;
   }
 
   .content ul {
@@ -138,11 +138,21 @@
   .titleblack_reg h2 {
     @apply font-Heading lg:text-34 lg:leading-44 leading-34 text-24 font-500 sm:uppercase normal-case sm:tracking-[1.3px] text-black relative;
   }
+  .titleblack_reg h2 span {
+    @apply text-primary;
+  }
+
+  .titleblack_common h2 {
+    @apply font-primary lg:text-34 lg:leading-44 leading-34 text-24 font-500 sm:uppercase normal-case sm:tracking-[1.3px] text-black relative;
+  }
+  .titleblack_common h2 span {
+    @apply text-primary;
+  }
 }
 
 @layer components {
   .btn_primary {
-    @apply px-[24px] py-[14px] sm:font-400 font-500 font-montserrat text-16 leading-16 text-white rounded-5 bg-primary inline-block relative overflow-hidden duration-300 delay-150 ease-linear z-1 uppercase;
+    @apply px-[24px] py-[14px] font-500 font-montserrat text-16 leading-16 text-white rounded-5 bg-primary inline-block relative overflow-hidden duration-300 delay-150 ease-linear z-1 uppercase;
   }
 
   .btn_primary:before {
@@ -155,7 +165,7 @@
   }
 
   .btn_secondary {
-    @apply px-[24px] py-[14px] sm:font-400 font-500 font-montserrat text-16 leading-16 text-white rounded-5 bg-secondary inline-block relative overflow-hidden duration-300 delay-150 ease-linear z-1 uppercase;
+    @apply px-[24px] py-[14px] font-500 font-montserrat text-16 leading-16 text-white rounded-5 bg-secondary inline-block relative overflow-hidden duration-300 delay-150 ease-linear z-1 uppercase;
   }
 
   .btn_secondary:before {
@@ -184,7 +194,30 @@
   }
 }
 
-@layer utilities {}
+@layer utilities {
+  /* Loader CSS Start */
+    .loaderwrapper {
+      @apply px-20 py-15 fixed top-0 left-0 w-full h-full flex justify-center items-center z-99999 bg-grey-200;
+    }
+  
+    .loader {
+      @apply w-[50px] p-[8px] aspect-[1] rounded-50 bg-primary mx-auto my-15;
+      --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+      -webkit-mask: var(--_m);
+      mask: var(--_m);
+      -webkit-mask-composite: source-out;
+      mask-composite: subtract;
+      animation: l3 1s infinite linear;
+    }
+  
+    @keyframes l3 {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+  
+    /* Loader CSS End */
+}
 
 /* Responsive CSS Start */
 @screen lgscreen {}
